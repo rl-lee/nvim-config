@@ -64,6 +64,15 @@ return {
 
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+				opts.desc = "LSP list functions"
+				keymap.set("n", "<leader>lf", "<cmd>Telescope lsp_document_symbols symbols=function<CR>", opts)
+
+				opts.desc = "LSP list classes"
+				keymap.set("n", "<leader>lc", "<cmd>Telescope lsp_document_symbols symbols=class<CR>", opts)
+
+				opts.desc = "LSP list methods"
+				keymap.set("n", "<leader>lm", "<cmd>Telescope lsp_document_symbols symbols=method<CR>", opts)
 			end,
 		})
 
@@ -111,7 +120,10 @@ return {
 								jedi_completion = {
 									include_params = true,
 								},
-								pycodestyle = { enable = false },
+								pycodestyle = {
+									enabled = true,
+									maxLineLength = 100,
+								},
 							},
 						},
 					},

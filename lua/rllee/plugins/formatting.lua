@@ -16,6 +16,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 			},
+			-- autoformat = false,
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,

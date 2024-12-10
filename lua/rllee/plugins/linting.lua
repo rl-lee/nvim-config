@@ -20,6 +20,11 @@ return {
 			end,
 		})
 
+		--Set pylint to work in venv
+		lint.linters.pylint.cmd = "python3"
+		-- This line below seems to cause a bug...
+		-- lint.linters.pylint.args = { "-m", "pylint", "-f", "json" }
+
 		vim.keymap.set("n", "<leader>l", function()
 			lint.try_lint()
 		end, { desc = "Trigger linting for current file" })

@@ -1,0 +1,27 @@
+return {}
+-- return {
+-- 	{
+-- 		"mfussenegger/nvim-dap",
+-- 		dependencies = {
+-- 			"leoluz/nvim-dap-go",
+-- 			"rcarriage/nvim-dap-ui",
+-- 			"theHamsta/nvim-dap-virtual-text",
+-- 			"nvim-neotest/nvim-nio",
+-- 			"williamboman/mason.nvim",
+-- 		},
+-- 		config = function()
+-- 			local dap = require("dap")
+-- 			local ui = require("dapui")
+--
+--             ui.setup()
+--             require("dap-go").setup()
+--
+--             local elixir_ls_debugger = vim.fn.exepath("elixir_ls_debugger")
+--             if elixir_ls_debugger ~= "" then
+--                 dap.adapters.mix_task = {
+--                     type = "executable",
+--                     command = elixir_ls_debugger,
+--                 }
+-- 		end,
+-- 	},
+-- }

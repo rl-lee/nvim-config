@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("n", "{", "{{jzz")
-keymap.set("n", "}", "}jzz")
+keymap.set("n", "{", "{{wzz")
+keymap.set("n", "}", "}wzz")
 
 keymap.set("n", "<leader>rw", vim.cmd.Ex)
 
@@ -12,6 +12,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 --half page navigation
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("v", "<C-d>", "<C-d>zz")
+keymap.set("v", "<C-u>", "<C-u>zz")
 keymap.set("n", "G", "Gzz")
 
 --increment/decrement numbers
@@ -29,3 +31,10 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close new tab" }) -
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) -- go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) -- go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) -- open current buffer in new tab
+
+keymap.set(
+	"n",
+	"<leader>py",
+	"<C-w>v<cmd>terminal ipython<CR>i%matplotlib qt<CR><C-\\><C-n>G<C-w>h",
+	{ desc = "Open a vertical split with a terminal running ipython" }
+)

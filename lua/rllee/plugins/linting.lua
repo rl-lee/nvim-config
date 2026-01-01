@@ -6,7 +6,7 @@ return {
 
 		lint.linters_by_ft = {
 			python = { "pylint" },
-			cpp = { "cppcheck", "clangtidy" },
+			cpp = { "cppcheck" },
 			cmake = { "cmakelint" },
 			latex = { "lacheck" },
 		}

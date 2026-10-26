@@ -28,7 +28,7 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				"clangd",
-				"cmake",
+				-- "cmake",
 				"texlab",
 				"lua_ls",
 				"pylsp",
